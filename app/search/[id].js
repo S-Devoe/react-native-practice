@@ -9,6 +9,7 @@ import {
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { Text, SafeAreaView } from "react-native";
 import axios from "axios";
+import { API_KEY } from "@env";
 
 import { ScreenHeaderBtn, NearbyJobCard } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
@@ -32,8 +33,7 @@ const JobSearch = () => {
         method: "GET",
         url: `https://jsearch.p.rapidapi.com/search`,
         headers: {
-          "X-RapidAPI-Key":
-            "9d933fa6f8msh5994cab91cb832dp164e4ajsncae7518f4492",
+          "X-RapidAPI-Key": API_KEY,
           "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
         },
         params: {
